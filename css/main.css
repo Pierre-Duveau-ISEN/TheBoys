@@ -1,0 +1,16 @@
+nav{
+    padding: auto;
+}
+
+nav li{
+    margin-left: 30px;
+    display: inline;
+}
+
+.nav-item{
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    color: red;
+}
