@@ -10,3 +10,7 @@
 ## C'est ici où on met ce que l'on a fait afin de préparé le compte rendu pour la prof:
 **Retour à la ligne dans un paragraphe avec le backslash**
 
+### 26/10/2025: 
+- Pierre: Bases du nav avec la possibilité d'avoir un menu déroulant pour une catégorie
+
+
