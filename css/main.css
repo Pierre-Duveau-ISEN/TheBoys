@@ -59,10 +59,14 @@ nav a{
 
 .imglink{
   display: flex;
+}
+
+.imglink img{
   width: 500px;
   height: 650px;
   margin: 20px;
 }
+
 
 
 /*Partie: FOOTER*/
