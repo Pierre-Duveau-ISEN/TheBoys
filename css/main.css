@@ -58,6 +58,13 @@ nav a{
 /*Partie: MAIN*/
 
 .imglink{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.imglink img{
   width: 20px;
   height: 50px;
 }
