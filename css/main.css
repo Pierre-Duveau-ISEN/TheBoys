@@ -59,7 +59,9 @@ nav a{
 
 .imglink{
   display: flex;
-  width: 20px;
+  width: 500px;
+  height: 650px;
+  margin: 20px;
 }
 
 
