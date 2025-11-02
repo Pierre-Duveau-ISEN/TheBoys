@@ -8,7 +8,9 @@
 }
 
 /*Partie: HEAD*/
-
+header {
+  background-color: black;
+}
 
 /*Partie: NAV*/
 nav {
