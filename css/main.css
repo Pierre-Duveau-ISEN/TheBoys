@@ -10,6 +10,7 @@
 /*Partie: HEAD*/
 header {
   background-color: black;
+  border: 2px solid black;
 }
 
 /*Partie: NAV*/
