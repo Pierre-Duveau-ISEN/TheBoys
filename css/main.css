@@ -1,76 +1,182 @@
-/*Paramètres généraux de la page*/
-*{
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+/* =========================================
+   VARIABLES & GLOBAL
+   ========================================= */
+:root {
+    --boys-black: #0a0a0a;
+    --boys-dark: #141414;
+    --boys-yellow: #f5c518;
+    --boys-red: #b30000;
+    --text-color: #e0e0e0;
+    --font-head: 'Arial Black', 'Impact', sans-serif;
+    --font-body: 'Arial', Helvetica, sans-serif;
+}
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     list-style-type: none;
 }
 
-/*Partie: HEAD*/
+body {
+    background-color: var(--boys-black);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
+}
+
+/* =========================================
+   HEADER & NAV
+   ========================================= */
 header {
-  background-color: black;
-  border: 2px solid black;
+    background-color: black;
+    border-bottom: 3px solid var(--boys-yellow);
+    text-align: center;
+    padding: 15px 0;
 }
 
-/*Partie: NAV*/
+header img {
+    height: 100px;
+    transition: transform 0.3s;
+}
+header img:hover { transform: scale(1.05); }
+
 nav {
-  border: 2px solid black;
-}
-
-nav a{
-  color: black;
+    background-color: var(--boys-dark);
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
 
 .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .menu > li {
-  position: relative;
+    position: relative;
+    padding: 15px 20px;
+    font-family: var(--font-head);
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
 }
 
+.menu > li:hover { color: var(--boys-yellow); }
+.menu > li > a { color: inherit; }
+
+/* Sous-menu */
 .submenu {
-  display: none;
-  position: absolute;
-  background: #fff;
-  list-style: none;
-  padding: 0.5rem 0;
-  margin: 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  min-width: 150px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    border: 1px solid var(--boys-yellow);
+    min-width: 180px;
+    z-index: 200;
 }
 
-.menu > li:hover .submenu {
-  display: block;
+.menu > li:hover .submenu { display: block; }
+
+.submenu li { padding: 10px; border-bottom: 1px solid #333; }
+.submenu li:hover { background-color: var(--boys-yellow); }
+.submenu li:hover a { color: black; }
+.submenu a { color: #ccc; display: block; font-family: var(--font-body); font-weight: bold; }
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 1px solid #333;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
-.submenu li {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+.titrepage {
+    font-family: var(--font-head);
+    color: var(--boys-yellow);
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px solid var(--boys-yellow);
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 0 #000;
 }
 
-.submenu li:hover {
-  background: #f2f2f2;
+h3 {
+    font-family: var(--font-head);
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    padding-left: 15px;
+    border-left: 5px solid var(--boys-red);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(179,0,0,0.2), transparent);
 }
 
-/*Partie: MAIN*/
+p { margin-bottom: 15px; text-align: justify; }
 
-.imglink{
-  display: flex;
+/* Liens dans le texte */
+main a { color: var(--boys-yellow); font-weight: bold; border-bottom: 1px dotted var(--boys-yellow); transition: 0.3s; }
+main a:hover { color: var(--boys-red); border-bottom: 1px solid var(--boys-red); }
+
+/* =========================================
+   GALERIE PERSONNAGES (INDEX)
+   ========================================= */
+.imglink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.imglink img{
-  width: 500px;
-  height: 650px;
-  margin: 20px;
+.imglink li {
+    flex: 1 1 200px;
+    max-width: 300px;
+    transition: 0.3s;
 }
 
+.imglink img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid #333;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
 
+.imglink li:hover img {
+    filter: grayscale(0%);
+    border-color: var(--boys-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
+}
 
-/*Partie: FOOTER*/
+/* =========================================
+   WIKI TABLE
+   ========================================= */
+.faction-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.faction-table th { background: var(--boys-red); color: white; padding: 10px; font-family: var(--font-head); }
+.faction-table td { border: 1px solid #444; padding: 15px; vertical-align: top; background: rgba(0,0,0,0.3); }
 
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    font-size: 0.8rem;
+}
