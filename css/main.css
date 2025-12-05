@@ -33,7 +33,7 @@ body {
    ========================================= */
 header {
     background-color: black;
-    border-bottom: 3px solid var(--boys-yellow);
+    border-bottom: 3px solid var(--boys-red);
     text-align: center;
     padding: 15px 0;
 }
@@ -68,7 +68,7 @@ nav {
     cursor: pointer;
 }
 
-.menu > li:hover { color: var(--boys-yellow); }
+.menu > li:hover { color: var(--boys-red); }
 .menu > li > a { color: inherit; }
 
 /* Sous-menu */
@@ -78,7 +78,7 @@ nav {
     top: 100%;
     left: 0;
     background-color: black;
-    border: 1px solid var(--boys-yellow);
+    border: 1px solid var(--boys-red);
     min-width: 180px;
     z-index: 200;
 }
@@ -86,7 +86,7 @@ nav {
 .menu > li:hover .submenu { display: block; }
 
 .submenu li { padding: 10px; border-bottom: 1px solid #333; }
-.submenu li:hover { background-color: var(--boys-yellow); }
+.submenu li:hover { background-color: var(--boys-red); }
 .submenu li:hover a { color: black; }
 .submenu a { color: #ccc; display: block; font-family: var(--font-body); font-weight: bold; }
 
@@ -104,11 +104,11 @@ main {
 
 .titrepage {
     font-family: var(--font-head);
-    color: var(--boys-yellow);
+    color: var(--boys-red);
     text-transform: uppercase;
     font-size: 3rem;
     text-align: center;
-    border-bottom: 2px solid var(--boys-yellow);
+    border-bottom: 2px solid var(--boys-red);
     margin-bottom: 30px;
     text-shadow: 3px 3px 0 #000;
 }
@@ -127,7 +127,7 @@ h3 {
 p { margin-bottom: 15px; text-align: justify; }
 
 /* Liens dans le texte */
-main a { color: var(--boys-yellow); font-weight: bold; border-bottom: 1px dotted var(--boys-yellow); transition: 0.3s; }
+main a { color: var(--boys-red); font-weight: bold; border-bottom: 1px dotted var(--boys-red); transition: 0.3s; }
 main a:hover { color: var(--boys-red); border-bottom: 1px solid var(--boys-red); }
 
 /* =========================================
@@ -157,7 +157,7 @@ main a:hover { color: var(--boys-red); border-bottom: 1px solid var(--boys-red);
 
 .imglink li:hover img {
     filter: grayscale(0%);
-    border-color: var(--boys-yellow);
+    border-color: var(--boys-red);
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
 }
