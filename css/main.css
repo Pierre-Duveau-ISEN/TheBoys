@@ -44,6 +44,33 @@ header img {
 }
 header img:hover { transform: scale(1.05); }
 
+header button{
+    background-color: var(--boys-dark);
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 140px;
+    height: 30px;
+    object-fit: cover;
+    border: 2px solid #333;
+    transition: 0.4s;
+
+}
+
+header button:hover{
+    border-color: var(--boys-red);
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
+}
+
+header button a{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
 nav {
     background-color: var(--boys-dark);
     border-bottom: 1px solid #333;
@@ -179,4 +206,61 @@ footer {
     border-top: 1px solid #333;
     margin-top: 50px;
     font-size: 0.8rem;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+
+form{
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid var(--boys-red);
+    border-radius: 25px;
+}
+
+form .legende{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--boys-red-);
+}
+
+form .label{
+    position: relative;
+    left: 30%;
+}
+form .input{
+    position: relative;
+    left: 32%;
+}
+
+form .submit{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: var(--boys-dark);
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    width: 140px;
+    height: 30px;
+    object-fit: cover;
+    border: 2px solid #333;
+    transition: 0.4s;
+    color:var(--text-color);
+    font-weight: bold;
+}
+
+form .submit:hover{
+    border-color: var(--boys-red);
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
+}
+
+form p{
+    display: block;
+    margin: auto;
+    text-align: center;
 }
