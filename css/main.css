@@ -121,19 +121,44 @@ nav {
    MAIN CONTENT
    ========================================= */
 main {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 25%);
+
     max-width: 1100px;
     margin: 40px auto;
     padding: 30px;
     background-color: rgba(30, 30, 30, 0.6);
     border: 1px solid #333;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    grid-template-areas: "title title title"
-                         " texte texte aside"
+
+}
+/*=======================
+Page de personnage
+=========================
+*/
+.personnage {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas: "title title title "
+                         "texte texte aside"
                          "texte texte aside"
                          "texte texte aside";
+    column-gap: 10px;
+}
+
+.aside{
+    border: solid var(--boys-red);
+    border-radius: 5px;
+    grid-area: aside;
+    box-shadow: 1px 1px 5px var(--boys-red);
+    
+}
+
+.asideimg{
+    max-width: 100%;
+    border-bottom: var(--boys-red) solid 3px;
+}
+.aside p{
+    text-overflow: ellipsis
 }
 
 .titrepage {
@@ -147,8 +172,12 @@ main {
     text-shadow: 3px 3px 0 #000;
     grid-area: title;
 }
-.texte{
+.texte {
     grid-area: texte;
+}
+.texte p {
+  text-overflow: ellipsis;
+
 }
 
 h3 {
