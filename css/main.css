@@ -121,12 +121,19 @@ nav {
    MAIN CONTENT
    ========================================= */
 main {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
     max-width: 1100px;
     margin: 40px auto;
     padding: 30px;
     background-color: rgba(30, 30, 30, 0.6);
     border: 1px solid #333;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    grid-template-areas: "title title title"
+                         " texte texte aside"
+                         "texte texte aside"
+                         "texte texte aside";
 }
 
 .titrepage {
@@ -138,6 +145,10 @@ main {
     border-bottom: 2px solid var(--boys-red);
     margin-bottom: 30px;
     text-shadow: 3px 3px 0 #000;
+    grid-area: title;
+}
+.texte{
+    grid-area: texte;
 }
 
 h3 {
@@ -149,6 +160,7 @@ h3 {
     border-left: 5px solid var(--boys-red);
     text-transform: uppercase;
     background: linear-gradient(90deg, rgba(179,0,0,0.2), transparent);
+
 }
 
 p { margin-bottom: 15px; text-align: justify; }
