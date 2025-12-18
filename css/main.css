@@ -1,5 +1,5 @@
 /* =========================================
-   VARIABLES & GLOBAL
+   Variables et fondations
    ========================================= */
 :root {
     --boys-black: #0a0a0a;
@@ -29,7 +29,7 @@ body {
 }
 
 /* =========================================
-   HEADER & NAV
+   Header et nav
    ========================================= */
 header {
     background-color: black;
@@ -43,6 +43,12 @@ header img {
     transition: transform 0.3s;
 }
 header img:hover { transform: scale(1.05); }
+
+.logshop{
+    float: right;
+    position: relative;
+    top: 40px;
+}
 
 header button{
     background-color: var(--boys-dark);
@@ -119,7 +125,7 @@ nav {
 .submenu a { color: #ccc; display: block; font-family: var(--font-body); font-weight: bold; }
 
 /* =========================================
-   MAIN CONTENT
+   Le main
    ========================================= */
 main {
 
@@ -209,7 +215,10 @@ h3 {
     background: linear-gradient(90deg, rgba(179,0,0,0.2), transparent);
 
 }
-
+iframe{
+    height: 250px;
+    max-width: 100%;
+}
 p { margin-bottom: 15px; text-align: justify; }
 
 /* Liens dans le texte */
@@ -217,7 +226,7 @@ main a { color: var(--boys-red); font-weight: bold; border-bottom: 1px dotted va
 main a:hover { color: var(--boys-red); border-bottom: 1px solid var(--boys-red); }
 
 /* =========================================
-   GALERIE PERSONNAGES (INDEX)
+   Galerie des personnages (index)
    ========================================= */
 .imglink {
     display: flex;
@@ -249,14 +258,14 @@ main a:hover { color: var(--boys-red); border-bottom: 1px solid var(--boys-red);
 }
 
 /* =========================================
-   WIKI TABLE
+   Tableau
    ========================================= */
 .faction-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 .faction-table th { background: var(--boys-red); color: white; padding: 10px; font-family: var(--font-head); }
 .faction-table td { border: 1px solid #444; padding: 15px; vertical-align: top; background: rgba(0,0,0,0.3); }
 
 /* =========================================
-   FOOTER
+   Footer
    ========================================= */
 footer {
     text-align: center;
@@ -268,7 +277,7 @@ footer {
 }
 
 /* =========================================
-   FORM
+   Formulaire de connection
    ========================================= */
 
 form{
@@ -325,7 +334,7 @@ form p{
 }
 
 /* =========================================
-   SHOP STYLES
+   Page du shop
    ========================================= */
 .shop-grid {
     display: grid;
@@ -445,23 +454,53 @@ form p{
       FORMAT TELEPHONE
 ==================*/
 
-@media screen and (max-width: 708px){
+@media screen and (max-width: 576px){
+    /*Les images permettant d'accéder au personnages en colone*/
     .imglink{
         flex-direction: column;
         align-items: center;
     }
+
+    /* décalage du logo à gauche*/
     header{
         text-align: left;
     }
+    /*Changement mettant l'Aside au dessus */
     .personnage{
         grid-template-columns: 100%;
-        grid-template-rows: 100px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: "title"
                              "aside"
-                             "texte"
                              "texte";
     }
     .titrepage{
         border: none;
+    }
+    nav li{
+        padding: 10px;
+        text-align: center;
+    }
+    form .input{
+        position: relative;
+        left: 5%;
+        width: 80%;
+    }
+    form .label{
+        left: 5%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .personnage{
+        grid-template-columns: 34% 33% 33%;
+        grid-template-rows: 5% auto auto;
+        grid-template-areas: "title title title"
+                             "aside aside aside"
+                             "texte texte texte";
+        
+    }
+    header{
+        text-align: left;
     }
 }
