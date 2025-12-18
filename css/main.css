@@ -137,12 +137,13 @@ Page de personnage
 .personnage {
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: repeat(4, 25%);
+    grid-template-rows: 15% 35% 25% 25%;
     grid-template-areas: "title title title "
                          "texte texte aside"
                          "texte texte aside"
                          "texte texte aside";
     column-gap: 10px;
+
 }
 
 .aside{
@@ -153,12 +154,20 @@ Page de personnage
     
 }
 
-.asideimg{
+.aside img{
     max-width: 100%;
     border-bottom: var(--boys-red) solid 3px;
 }
 .aside p{
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align: justify;
+    margin: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.small{
+    font-size: 10px;
 }
 
 .titrepage {
@@ -176,8 +185,16 @@ Page de personnage
     grid-area: texte;
 }
 .texte p {
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
 
+h6{
+    color: maroon;
+    font-weight: bold;
+    font-size: medium;
+    margin: 5px;
+    display: inline;
+    text-decoration: underline;
 }
 
 h3 {
@@ -304,4 +321,29 @@ form p{
     display: block;
     margin: auto;
     text-align: center;
+}
+
+/*=================
+      FORMAT TELEPHONE
+==================*/
+
+@media screen and (max-width: 708px){
+    .imglink{
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        text-align: left;
+    }
+    .personnage{
+        grid-template-columns: 100%;
+        grid-template-rows: 100px auto auto;
+        grid-template-areas: "title"
+                             "aside"
+                             "texte"
+                             "texte";
+    }
+    .titrepage{
+        border: none;
+    }
 }
