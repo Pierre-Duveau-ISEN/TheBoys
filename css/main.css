@@ -503,4 +503,7 @@ form p{
     header{
         text-align: left;
     }
+    .titrepage{
+        border: none;
+    }
 }
