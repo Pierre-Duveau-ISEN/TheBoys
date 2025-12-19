@@ -405,7 +405,7 @@ form p{
 .pub-track {
     display: flex;
     width: max-content; 
-    animation: scrollPub 10s linear infinite; 
+    animation: scrollPub 5s linear infinite; 
 }
 
 /* ARRET AU SURVOL */
