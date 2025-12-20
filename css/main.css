@@ -454,7 +454,10 @@ form p{
       FORMAT TELEPHONE
 ==================*/
 
-@media screen and (max-width: 576px){
+
+
+
+@media screen and (max-width: 447px){
     /*Les images permettant d'accéder au personnages en colone*/
     .imglink{
         flex-direction: column;
@@ -489,12 +492,31 @@ form p{
         left: 5%;
         width: 100%;
     }
+    .menu >li {
+        font-size: 11px;
+    }
+    
+    header button{
+
+    font-size: 14px;
+    width: 100px;
+    height: 25px;
+    }
+    .titrepage{
+        font-size: 40px;
+    }
+
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+
+
+/*============
+ Format tablette portrait
+ =============*/
+@media (min-width: 447px) and (max-width: 768px) {
     .personnage{
         grid-template-columns: 34% 33% 33%;
-        grid-template-rows: 5% auto auto;
+        grid-template-rows: 7% auto auto;
         grid-template-areas: "title title title"
                              "aside aside aside"
                              "texte texte texte";
@@ -505,5 +527,12 @@ form p{
     }
     .titrepage{
         border: none;
+    }
+    .menu >li {
+        font-size: 13.9px;
+    }
+    nav li{
+        padding: 10px;
+        text-align: center;
     }
 }
